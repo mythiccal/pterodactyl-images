@@ -1,4 +1,4 @@
-FROM        container-registry.oracle.com/graalvm/jdk:17
+FROM        container-registry.oracle.com/graalvm/jdk-ee:17
 
 LABEL       author="mythiccal" maintainer="mail@chillzone.cc"
 LABEL       org.opencontainers.image.source="https://github.com/mythiccal/pterodactyl-images"
