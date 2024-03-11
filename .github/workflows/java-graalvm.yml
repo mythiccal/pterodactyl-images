@@ -19,6 +19,16 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  login:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Login to oraclereg
+        uses: docker/login-action@v3
+        with:
+          registry: container-registry.oracle.com
+          username: ${{ secrets.OCI_USERNAME }}
+          password: ${{ secrets.OCI_TOKEN }}
   build_and_push:
     name: "java_${{ matrix.tag }}_graalvm"
     runs-on: ubuntu-latest
