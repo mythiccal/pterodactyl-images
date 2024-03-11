@@ -41,6 +41,13 @@ jobs:
           - 17
           - 21
     steps:
+      - name: Login to oraclereg
+        uses: docker/login-action@v3
+        with:
+          registry: container-registry.oracle.com
+          username: ${{ secrets.OCI_USERNAME }}
+          password: ${{ secrets.OCI_TOKEN }}
+          
       - name: Git checkout for Github repository workspace
         uses: actions/checkout@v4
 
