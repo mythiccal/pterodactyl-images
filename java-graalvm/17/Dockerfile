@@ -1,7 +1,7 @@
-FROM        ghcr.io/graalvm/jdk-community:17-ol8
+FROM        container-registry.oracle.com/graalvm/jdk:17
 
-LABEL       author="Softwarenoob" maintainer="admin@softwarenoob.com"
-LABEL       org.opencontainers.image.source="https://github.com/Software-Noob/pterodactyl-images"
+LABEL       author="mythiccal" maintainer="mail@chillzone.cc"
+LABEL       org.opencontainers.image.source="https://github.com/mythiccal/pterodactyl-images"
 LABEL       org.opencontainers.image.licenses="MIT"
 
 RUN         microdnf update \
