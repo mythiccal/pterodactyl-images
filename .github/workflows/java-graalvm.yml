@@ -37,6 +37,7 @@ jobs:
       matrix:
         tag:
           - 17
+          - 21
     steps:
           
       - name: Git checkout for Github repository workspace
