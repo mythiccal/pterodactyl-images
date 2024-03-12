@@ -9,4 +9,5 @@ Might need you to register on [oracle's container registry](container-registry.o
 
 ## Images
 Java 17 ```ghcr.io/mythiccal/pterodactyl-images:java_17_graalvm```
+
 Java 21 ```ghcr.io/mythiccal/pterodactyl-images:java_21_graalvm```
