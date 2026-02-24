@@ -54,4 +54,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/software-noob/pterodactyl-images:java_${{ matrix.tag }} # You can change 'java' back to 'python' if you prefer that image tag!
+            ghcr.io/software-noob/pterodactyl-images:java_${{ matrix.tag }}
