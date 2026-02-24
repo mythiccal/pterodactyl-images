@@ -15,7 +15,7 @@ permissions:
   packages: write
 
 concurrency:
-  group: python-${{ github.ref }}-1
+  group: java-graalvm-${{ github.ref }}-1 # Updated group name for clarity
   cancel-in-progress: true
 
 jobs:
@@ -49,9 +49,9 @@ jobs:
       - name: Build and push image
         uses: docker/build-push-action@v5
         with:
-          context: ./python
-          file: ./python/${{ matrix.tag }}/Dockerfile
+          context: ./java-graalvm # Changed from ./python
+          file: ./java-graalvm/${{ matrix.tag }}/Dockerfile # Changed from ./python
           platforms: linux/amd64,linux/arm64
           push: true
           tags: |
-            ghcr.io/software-noob/pterodactyl-images:python_${{ matrix.tag }}
+            ghcr.io/software-noob/pterodactyl-images:java_${{ matrix.tag }} # You can change 'java' back to 'python' if you prefer that image tag!
